@@ -20,6 +20,18 @@ class Artist
     @id = id
   end
 
+#########
 
+  def self.delete_all()
+    sql = "DELETE FROM artists"
+    SqlRunner.run(sql)
+  end
+
+  def self.all()
+    sql = "INSERT * FROM artists"
+    artists = SqlRunner.run(sql)
+    result = artists.map{|artist_hash|Artist.new(artist_hash)}
+    return result
+  end
 
 end

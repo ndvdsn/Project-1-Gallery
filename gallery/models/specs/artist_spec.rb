@@ -20,5 +20,7 @@ class TestArtist < Minitest::Test
     assert_equal("Lowther", result)
   end
 
+  
+
 
 end

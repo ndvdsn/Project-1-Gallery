@@ -20,6 +20,20 @@ class Exhibit
     @id = id.to_i
   end
 
+####################
+
+  def self.delete_all()
+    sql = "DELETE FROM exhibits"
+    SqlRunner.run(sql)
+  end
+
+  def self.all()
+    sql = "INSERT * FROM exhibits"
+    exhibits = SqlRunner.run(sql)
+    result = exhibit.map{|exhibit_hash|Exhibit.new(exhibit_hash)}
+    return result
+  end
+
 
 
 end
