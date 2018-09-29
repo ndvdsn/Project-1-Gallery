@@ -1,1 +1,13 @@
-<h1>akjshdkajhsdkjah</h1>
+<h1>Current Exhibits</h1>
+
+<% @artists.each do |artist| %>
+<div class="artist">
+<p><%= artist.join_name() %></p>
+
+
+<% end %>
+
+<p>First Name: <%= @exhibit.title %></p>
+<p>Last Name: <%= @exhibit.exhibit_information %></p>
+<p>Topping: <%= @artist.join_name %></p>
+<p>Quantity: <%= @artist.artist_information %></p>

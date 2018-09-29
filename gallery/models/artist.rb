@@ -12,6 +12,10 @@ class Artist
     @artist_information = options["artist_information"]
   end
 
+  def join_name()
+    return "#{first_name}" +" " + "#{last_name}"
+  end
+
   def save()
     sql = "INSERT INTO artists (first_name, last_name, artist_information) VALUES ($1, $2, $3) RETURNING id"
     values = [@first_name, @last_name, @artist_information]
@@ -26,6 +30,11 @@ class Artist
     SqlRunner.run(sql, values)
   end
 
+  def update()
+    sql = "UPDATE artists SET ( first_name, last_name, artist_information) = ($1, $2, $3) WHERE id = $4"
+    values = [@first_name, @last_name, @artist_information]
+    SqlRunner.run(sql, values)
+  end
 #########
 
   def self.delete_all()
@@ -40,6 +49,13 @@ class Artist
     return result
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = $1"
+    values = [id]
+    artist = SqlRunner.run(sql, values)
+    result = Artist.new( artist.first)
+    return result
+  end
 
 
 end

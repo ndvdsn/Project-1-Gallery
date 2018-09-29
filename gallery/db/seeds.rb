@@ -17,11 +17,11 @@ artist3.save
 artist4.save
 artist5.save
 
-exhibit1 = Exhibit.new({"title" => "Scrofula & Pox", "information" => "TEXT", "artist_id" => artist1.id})
-exhibit2 = Exhibit.new({"title" => "Inner Outer Otter", "information" => "TEXT", "artist_id" => artist2.id})
-exhibit3 = Exhibit.new({"title" => "CRYSTALLINE CHRYSALIS CRISIS", "information" => "TEXT", "artist_id" => artist3.id})
-exhibit4 = Exhibit.new({"title" => "Living Arrangement", "information" => "TEXT", "artist_id" => artist4.id})
-exhibit5 = Exhibit.new({"title" => "non organic bias", "information" => "TEXT", "artist_id" => artist5.id})
+exhibit1 = Exhibit.new({"title" => "Scrofula & Pox", "exhibit_information" => "TOXT", "artist_id" => artist1.id})
+exhibit2 = Exhibit.new({"title" => "Inner Outer Otter", "exhibit_information" => "TOXT", "artist_id" => artist2.id})
+exhibit3 = Exhibit.new({"title" => "CRYSTALLINE CHRYSALIS CRISIS", "exhibit_information" => "TOXT", "artist_id" => artist3.id})
+exhibit4 = Exhibit.new({"title" => "Living Arrangement", "exhibit_information" => "TOXT", "artist_id" => artist4.id})
+exhibit5 = Exhibit.new({"title" => "non organic bias", "exhibit_information" => "TOXT", "artist_id" => artist5.id})
 
 exhibit1.save
 exhibit2.save
