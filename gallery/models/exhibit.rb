@@ -20,6 +20,17 @@ class Exhibit
     @id = id.to_i
   end
 
+  def find_creator()
+    artist = Artist.find(@artist_id)
+    return exhibit
+  end
+
+  def delete()
+    sql = "DELETE FROM exhibits WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 ####################
 
   def self.delete_all()
