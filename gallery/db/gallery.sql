@@ -1,7 +1,6 @@
 DROP TABLE exhibits;
 DROP TABLE artists;
 
-
 CREATE TABLE artists (
   id SERIAL8 PRIMARY KEY,
   first_name VARCHAR(255),
