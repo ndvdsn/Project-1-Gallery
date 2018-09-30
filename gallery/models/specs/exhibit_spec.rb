@@ -14,7 +14,17 @@ class TestExhibit <Minitest::Test
     assert_equal("Scrofula & Pox", result)
   end
 
+  def delete_exhibit
+    sql = "DELETE FROM exhiits WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+
+  
+
 #########################
+
 
 
 

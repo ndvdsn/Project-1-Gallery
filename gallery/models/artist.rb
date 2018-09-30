@@ -15,6 +15,7 @@ class Artist
   def join_name()
     return "#{first_name}" +" " + "#{last_name}"
   end
+#tested on browser
 
   def save()
     sql = "INSERT INTO artists (first_name, last_name, artist_information) VALUES ($1, $2, $3) RETURNING id"
@@ -23,19 +24,21 @@ class Artist
     id = result.first["id"]
     @id = id
   end
+#database populated with seeds
 
-  def delete()
+  def delete_artist()
     sql = "DELETE FROM artists WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
   end
+  #needs tested
 
   def update()
     sql = "UPDATE artists SET ( first_name, last_name, artist_information) = ($1, $2, $3) WHERE id = $4"
     values = [@first_name, @last_name, @artist_information]
     SqlRunner.run(sql, values)
   end
-#########
+
 
   def self.delete_all()
     sql = "DELETE FROM artists"

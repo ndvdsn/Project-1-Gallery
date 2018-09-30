@@ -14,23 +14,23 @@ get '/index' do
 end
 
 
-get '/artists/new' do
-  @artists = Artist.all
-  erb(:show)
-end
-
-# next would be a post method
-
-get '/exhibits/new' do
-  @exhibits = Exhibit.all
-  erb(:show)
-end
-
-# need a thing that brings an exhibit via artist id or vice versa
-
-# show one artist
-
-get '/index/:id' do
-  @artists = Artist.find(params[:id])
-  erb(:show)
-end
+# get '/artists/new' do
+#   @artists = Artist.all
+#   erb(:show)
+# end
+#
+# # next would be a post method
+#
+# get '/exhibits/new' do
+#   @exhibits = Exhibit.all
+#   erb(:show)
+# end
+#
+# # need a thing that brings an exhibit via artist id or vice versa
+#
+# # show one artist
+#
+# get '/index/:id' do
+#   @artists = Artist.find(params[:id])
+#   erb(:show)
+# end
