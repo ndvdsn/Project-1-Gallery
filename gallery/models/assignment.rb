@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Assignment
 
-  # attr_accessor :artist_id, :exhibit_id,
+  
   attr_reader :id, :artist_id, :exhibit_id
 
   def initialize(options)

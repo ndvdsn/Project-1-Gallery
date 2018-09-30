@@ -57,8 +57,9 @@ assignment4.save
 assignment5.save
 assignment6.save
 assignment7.save
-# artist1.delete_artist()
-#
+
+# # artist1.delete_artist()
+# #
 # exhibit1.delete_exhibit()
 #
 #

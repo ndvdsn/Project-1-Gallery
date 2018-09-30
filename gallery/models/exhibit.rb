@@ -26,7 +26,7 @@ class Exhibit
     return exhibit
   end
 
-  def delete()
+  def delete_exhibit()
     sql = "DELETE FROM exhibits WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
@@ -36,6 +36,13 @@ class Exhibit
     sql = "UPDATE exhibits SET ( title, exhibit_information, category) = ($1, $2, $3) WHERE id = $4"
     values = [@title, @exhibit_information, @category]
     SqlRunner.run(sql, values)
+  end
+
+  def list_exhibits()
+    sql = "SELECT * FROM artists WHERE id = $1"
+    values = [@artist_id]
+    result = SqlRunner.run(sql, values)
+    return result.map{|result_hash|Artist.new(result_hash)}
   end
 
 
