@@ -4,6 +4,7 @@ require('pry-byebug')
 
 require_relative('./models/artist')
 require_relative('./models/exhibit')
+require_relative('./models/assignment')
 also_reload('./models/*')
 
 

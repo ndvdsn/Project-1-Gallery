@@ -2,13 +2,13 @@ require_relative('../db/sql_runner')
 
 class Assignment
 
-  attr_accessor :artist_id, :exhibit_id,
-  attr_reader :id
+  # attr_accessor :artist_id, :exhibit_id,
+  attr_reader :id, :artist_id, :exhibit_id
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
     @artist_id = options["artist_id"].to_i
-    @last_name = options["exhibit_id"].to_i
+    @exhibit_id = options["exhibit_id"].to_i
   end
 
   def save()
