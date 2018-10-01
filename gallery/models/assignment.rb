@@ -25,6 +25,13 @@ class Assignment
     SqlRunner.run(sql, values)
   end
 
+  def update()
+    sql = "UPDATE assignments SET ( artist_id, exhibit_id) = ($1, $2) WHERE id = $3"
+    values = [@artist_id, @exhibit_id, @id] #error was not having @id in here: pulls id from url etc
+    SqlRunner.run(sql, values)
+  end
+
+
 
   def self.delete_all()
     sql = "DELETE FROM assignments"

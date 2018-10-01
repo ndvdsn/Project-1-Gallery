@@ -1,0 +1,20 @@
+<form method="post" action="/edit_exhibit/<%=@exhibit.id%>">
+
+<label for="title">Title</label>
+<input id="title" type="text" name="title" value="<%=@exhibit.title%>"/>
+
+<label for="exhibit_information">Exhibit Information</label>
+<input id="exhibit_information" type="text" name="exhibit_information" value="<%=@exhibit.exhibit_information%>"/>
+
+<label for="category">Select Category</label>
+<select name="category" id="category">
+  <option value="<%=@exhibit.category%>"<%= "selected" if @exhibit.category == "Drawing" %>>Drawing</option>
+  <option value="<%=@exhibit.category%>"<%= "selected" if @exhibit.category == "Textiles" %>>Textiles</option>
+  <option value="<%=@exhibit.category%>"<%= "selected" if @exhibit.category == "Sculpture" %>>Sculpture</option>
+  <option value="<%=@exhibit.category%>"<%= "selected" if @exhibit.category == "Performance" %>>Performance</option>
+  <option value="<%=@exhibit.category%>"<%= "selected" if @exhibit.category == "Text" %>>Text</option>
+  <option value="<%=@exhibit.category%>"<%= "selected" if @exhibit.category == "Sound" %>>Sound</option>
+</select>
+
+<input type="submit" value="Update also"/>
+</form>

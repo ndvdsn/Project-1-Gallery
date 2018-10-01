@@ -34,7 +34,7 @@ class Exhibit
 
   def update_exhibit
     sql = "UPDATE exhibits SET ( title, exhibit_information, category) = ($1, $2, $3) WHERE id = $4"
-    values = [@title, @exhibit_information, @category]
+    values = [@title, @exhibit_information, @category, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -57,6 +57,14 @@ class Exhibit
     sql = "INSERT * FROM exhibits"
     exhibits = SqlRunner.run(sql)
     result = exhibit.map{|exhibit_hash|Exhibit.new(exhibit_hash)}
+    return result
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM exhibits WHERE id = $1"
+    values = [id]
+    exhibits = SqlRunner.run(sql, values)
+    result = Exhibit.new( exhibits.first)
     return result
   end
 

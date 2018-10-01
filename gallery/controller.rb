@@ -40,8 +40,19 @@ get '/edit_artist/:id' do
   erb(:edit)
 end
 
-post '/edit_artist' do
-  @artist = Artist.new(params)
+post '/edit_artist/:id' do
+  @artist = Artist.new(params[:id])
   @artist.update()
-  erb(:updated_artist)
+  redirect '/brown-study'
+end
+
+get '/edit_exhibit/:id' do
+  @exhibit = Exhibit.find(params[:id])
+  erb(:edit)
+end
+
+post '/edit_exhibit/:id' do
+  @exhibit = EXhibit.new(params[:id])
+  @exhibit.update()
+  redirect '/brown-study'
 end

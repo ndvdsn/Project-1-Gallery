@@ -35,13 +35,13 @@ class Artist
 
   def update()
     sql = "UPDATE artists SET ( first_name, last_name, artist_information) = ($1, $2, $3) WHERE id = $4"
-    values = [@first_name, @last_name, @artist_information]
+    values = [@first_name, @last_name, @artist_information, @id] #error was not having @id in here: pulls id from url etc
     SqlRunner.run(sql, values)
   end
 
   def list_exhibits()
-    sql = "SELECT * FROM exhibits WHERE id = $1"
-    values = [@exhibit_id]
+    sql = "SELECT * FROM exhibits WHERE artist.id = $1"
+    values = [@id]
     result = SqlRunner.run(sql, values)
     return result.map{|result_hash|Exhibit.new(result_hash)}
   end
