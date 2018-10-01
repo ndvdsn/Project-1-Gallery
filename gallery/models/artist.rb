@@ -39,12 +39,12 @@ class Artist
     SqlRunner.run(sql, values)
   end
 
-  def list_exhibits()
-    sql = "SELECT * FROM exhibits WHERE artist.id = $1"
-    values = [@id]
-    result = SqlRunner.run(sql, values)
-    return result.map{|result_hash|Exhibit.new(result_hash)}
-  end
+  # def list_exhibits()
+  #   sql = "SELECT * FROM exhibits WHERE artist.id = $1"
+  #   values = [@id]
+  #   result = SqlRunner.run(sql, values)
+  #   return result.map{|result_hash|Exhibit.new(result_hash)}
+  # end
 
   def self.delete_all()
     sql = "DELETE FROM artists"

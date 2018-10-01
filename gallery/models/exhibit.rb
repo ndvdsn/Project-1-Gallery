@@ -38,12 +38,12 @@ class Exhibit
     SqlRunner.run(sql, values)
   end
 
-  def list_exhibits()
-    sql = "SELECT * FROM artists WHERE id = $1"
-    values = [@artist_id]
-    result = SqlRunner.run(sql, values)
-    return result.map{|result_hash|Artist.new(result_hash)}
-  end
+  # def list_exhibits()
+  #   sql = "SELECT * FROM artists WHERE id = $1"
+  #   values = [@artist_id]
+  #   result = SqlRunner.run(sql, values)
+  #   return result.map{|result_hash|Artist.new(result_hash)}
+  # end
 
 
 ####################
@@ -64,7 +64,7 @@ class Exhibit
     sql = "SELECT * FROM exhibits WHERE id = $1"
     values = [id]
     exhibits = SqlRunner.run(sql, values)
-    result = Exhibit.new( exhibits.first)
+    result = Exhibit.new(exhibits.first)
     return result
   end
 
