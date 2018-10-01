@@ -45,6 +45,7 @@ class Exhibit
   #   return result.map{|result_hash|Artist.new(result_hash)}
   # end
 
+  
 
 ####################
 
