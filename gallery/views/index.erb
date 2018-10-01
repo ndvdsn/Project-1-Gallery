@@ -3,10 +3,20 @@
 <% @artists.each do |artist| %>
 <div class="artist">
 <p><%= artist.join_name() %></p>
+<p><%= artist.artist_information() %></p>
+
 
 
 <% end %>
-
+</div>
 
 
 <p>Here is some text to test how things are working</p>
+
+<h1>EXHIBITS </h1>
+
+<% for exhibit in @exhibits %>
+  <p>Name: <%= artist.join_name() %></p>
+  <p>Exhibit: <%= exhibit.title %> <%= exhibit.exhibit_information %></p>
+  <p><a href="/edit_exhibit/<%= exhibit.id %>">Show Exhibit</a></p>
+<% end %>

@@ -11,9 +11,14 @@ also_reload('./models/*')
 #shows all artists at index
 get '/brown-study' do
   @artists = Artist.all
-  # @exhibits = Exhibit.all
   erb(:index)
 end
+
+get '/brown-study' do
+  @exhibits = Exhibit.all
+  erb(:index)
+end
+
 
 get '/artists/new' do
   erb(:new)
@@ -55,4 +60,10 @@ post '/edit_exhibit/:id' do
   exhibit = Exhibit.new(params)
   exhibit.update_exhibit()
   redirect '/brown-study'
+end
+
+#show one artist
+get '/artist/:id' do
+  @artist = Artist.find(params[:id])
+  erb(:view_artist)
 end

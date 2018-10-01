@@ -11,3 +11,17 @@ p {
   font-family: arial;
   color: blue;
 }
+
+nav {
+
+  font-family: arial;
+  color: orange;
+  font-size: 11pt;
+
+}
+
+form {
+  font-family: arial;
+  color: red;
+
+}
