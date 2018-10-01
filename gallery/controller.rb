@@ -19,7 +19,7 @@ get '/artists/new' do
   erb(:new)
 end
 
-post 'artists/new' do
+post '/artists/new' do
   @artist = Artist.new(params)
   @artist.save()
   erb(:added_artist)
@@ -27,4 +27,21 @@ end
 
 get '/exhibits/new' do
   erb(:new_exhibit)
+end
+
+post '/exhibits/new' do
+  @exhibit = Exhibit.new(params)
+  @exhibit.save()
+  erb(:added_exhibit)
+end
+
+get '/edit_artist/:id' do
+  @artist = Artist.find(params[:id])
+  erb(:edit)
+end
+
+post '/edit_artist' do
+  @artist = Artist.new(params)
+  @artist.update()
+  erb(:updated_artist)
 end

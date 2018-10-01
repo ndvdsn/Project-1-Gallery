@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Assignment
 
-  
+
   attr_reader :id, :artist_id, :exhibit_id
 
   def initialize(options)
@@ -17,6 +17,12 @@ class Assignment
     result = SqlRunner.run(sql, values)
     id = result.first["id"]
     @id = id
+  end
+
+  def delete_assignment()
+    sql = "DELETE FROM assignments WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
 
