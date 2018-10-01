@@ -14,3 +14,17 @@ get '/brown-study' do
   # @exhibits = Exhibit.all
   erb(:index)
 end
+
+get '/artists/new' do
+  erb(:new)
+end
+
+post 'artists/new' do
+  @artist = Artist.new(params)
+  @artist.save()
+  erb(:added_artist)
+end
+
+get '/exhibits/new' do
+  erb(:new_exhibit)
+end

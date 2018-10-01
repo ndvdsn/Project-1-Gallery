@@ -1,0 +1,24 @@
+<h3>New Exhibit</h3>
+
+
+<form method="post" action="/exhibits/new_exhibit">
+  <label for="title">Title</label>
+  <input id="title" type="text" name="title"/>
+
+  <label for="exhibit_information">Exhibit Information</label>
+  <input id="exhibit_information" type="text" name="exhibit_information"/>
+
+  <label for="category">Select Category</label>
+  <select name="category" id="category">
+    <option value="Drawing">Drawing</option>
+    <option value="Drawing">Textiles</option>
+    <option value="Drawing">Sculpture</option>
+    <option value="Drawing">Performance</option>
+    <option value="Drawing">Text</option>
+    <option value="Drawing">Sound</option>
+
+  </select>
+
+<input type="submit" value="Add Exhibit"/>
+
+</form>
