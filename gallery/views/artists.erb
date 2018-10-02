@@ -1,0 +1,12 @@
+<h1>Artists</h1>
+
+<% @artists.each do |artist| %>
+<div class="artist">
+<p><%= artist.join_name() %></p>
+<p><%= artist.artist_information() %></p>
+<p><a href="/artists/<%= artist.id%>/public">View Artist</a></p>
+<br>
+<br>
+
+<% end %>
+</div>

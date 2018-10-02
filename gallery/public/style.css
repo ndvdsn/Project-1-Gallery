@@ -2,6 +2,8 @@
 h1 {
   font-family: arial;
   color: blue;
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -9,19 +11,34 @@ h1 {
 p {
 
   font-family: arial;
-  color: blue;
+
 }
 
-nav {
+/* nav {
 
   font-family: arial;
   color: orange;
-  font-size: 11pt;
+  font-size: 11pt; */
 
 }
 
 form {
   font-family: arial;
   color: red;
+
+}
+
+.container {
+
+}
+
+.main {
+
+}
+
+.nav {
+  font-family: arial;
+  color: orange;
+  font-size: 11pt;
 
 }

@@ -27,6 +27,7 @@ end
 # show all exhibits at exhibits page
 get '/exhibits' do
   @exhibits = Exhibit.all
+  @artists = Artist.all
   erb(:view_exhibits)
 end
 
@@ -36,7 +37,11 @@ get '/current_exhibition' do
   erb(:current_exhibition)
 end
 
-
+#filer exhibits by artist name
+get '/current_exhibition' do
+  @artists = Artist.list_exhibits(params)
+erb(:current_exhibition)
+end
 
 
 #add new artist
@@ -104,4 +109,33 @@ end
 get '/public_exhibits/:id' do
   @exhibit = Exhibit.find(params[:id])
   erb(:public_exhibit)
+end
+
+post '/view_artist/:id/delete' do
+  artist = Artist.find(params[:id])
+  artist.delete_artist
+  redirect '/artists'
+end
+
+post '/view_exhibit/:id/delete' do
+  exhibit = Exhibit.find(params[:id])
+  exhibit.delete_exhibit
+  redirect '/exhibits'
+end
+
+get '/current_exhibition/:id/filter' do
+  artist = Artist.find(params[:id])
+  artist.list_exhibits
+  erb(:current_exhibition)
+end
+
+get '/artists/public' do
+  @artists = Artist.all
+  erb(:artists)
+end
+
+#show one public artist
+get '/artists/:id/public' do
+  @artist = Artist.find(params[:id])
+  erb(:public_artist)
 end
