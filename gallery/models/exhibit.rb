@@ -45,7 +45,7 @@ class Exhibit
   #   return result.map{|result_hash|Artist.new(result_hash)}
   # end
 
-  
+
 
 ####################
 
@@ -55,9 +55,9 @@ class Exhibit
   end
 
   def self.all()
-    sql = "INSERT * FROM exhibits"
+    sql = "SELECT * FROM exhibits"
     exhibits = SqlRunner.run(sql)
-    result = exhibit.map{|exhibit_hash|Exhibit.new(exhibit_hash)}
+    result = exhibits.map{|exhibit_hash|Exhibit.new(exhibit_hash)}
     return result
   end
 

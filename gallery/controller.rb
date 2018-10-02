@@ -8,18 +8,29 @@ require_relative('./models/assignment')
 also_reload('./models/*')
 
 
-#shows all artists at index
+#shows all artists at index manager
 get '/brown-study' do
+  erb(:index)
+end
+
+get '/manager_index' do
+  erb(:manager_index)
+end
+
+#show all artists at artists page
+get '/artists' do
   @artists = Artist.all
-  erb(:index)
+  erb(:view_artists)
 end
 
-get '/brown-study' do
+
+# show all exhibits at exhibits page
+get '/exhibits' do
   @exhibits = Exhibit.all
-  erb(:index)
+  erb(:view_exhibits)
 end
 
-
+#add new artist
 get '/artists/new' do
   erb(:new)
 end
@@ -30,6 +41,7 @@ post '/artists/new' do
   erb(:added_artist)
 end
 
+#add new exhibit
 get '/exhibits/new' do
   erb(:new_exhibit)
 end
@@ -40,6 +52,7 @@ post '/exhibits/new' do
   erb(:added_exhibit)
 end
 
+#edit and update artist
 get '/edit_artist/:id' do
   @artist = Artist.find(params[:id])
   erb(:edit)
@@ -51,6 +64,7 @@ post '/edit_artist/:id' do
   redirect '/brown-study'
 end
 
+#edit and update exhibit
 get '/edit_exhibit/:id' do
   @exhibit = Exhibit.find(params[:id])
   erb(:edit_exhibit)
@@ -66,4 +80,10 @@ end
 get '/artist/:id' do
   @artist = Artist.find(params[:id])
   erb(:view_artist)
+end
+
+# show one exhibit
+get '/exhibits/:id' do
+  @exhibit = Exhibit.find(params[:id])
+  erb(:view_exhibit)
 end

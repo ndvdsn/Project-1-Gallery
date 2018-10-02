@@ -1,0 +1,14 @@
+
+<h1> Exhibits</h1>
+
+<% @exhibits.each do |exhibit| %>
+<div class="exhibit">
+<p><%= exhibit.title() %></p>
+<p><%= exhibit.exhibit_information() %></p>
+<p><%= exhibit.category() %></p>
+<p><a href="/exhibits/<%= exhibit.id %>">View Exhibit</a></p>
+<br>
+<br>
+
+<% end %>
+</div>

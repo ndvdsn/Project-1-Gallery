@@ -1,3 +1,7 @@
 <p>First Name: <%= @artist.first_name %></p>
 <p>Last Name: <%= @artist.last_name %></p>
 <p>Information: <%= @artist.artist_information %></p>
+<p> <% @artist.id %></p>
+
+<a href="/edit_artist/<%=@artist.id%>">Update Artist</a>
+<a href="/artists/new">New Artist</a>

@@ -1,0 +1,7 @@
+<p>Title: <%= @exhibit.title %></p>
+<p>Information: <%= @exhibit.exhibit_information %></p>
+<p>Category: <%= @exhibit.category %></p>
+<p> <% @exhibit.id %></p>
+
+<a href="/edit_exhibit/<%=@exhibit.id%>">Update Exhibit</a>
+<a href="/exhibits/new">New Exhibit</a>
