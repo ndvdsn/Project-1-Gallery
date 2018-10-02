@@ -4,7 +4,7 @@ require('pry-byebug')
 
 require_relative('./models/artist')
 require_relative('./models/exhibit')
-require_relative('./models/assignment')
+# require_relative('./models/assignment')
 also_reload('./models/*')
 
 
@@ -36,6 +36,9 @@ get '/current_exhibition' do
   erb(:current_exhibition)
 end
 
+
+
+
 #add new artist
 get '/artists/new' do
   erb(:new)
@@ -49,6 +52,7 @@ end
 
 #add new exhibit
 get '/exhibits/new' do
+  @artists = Artist.all
   erb(:new_exhibit)
 end
 
@@ -73,6 +77,7 @@ end
 #edit and update exhibit
 get '/edit_exhibit/:id' do
   @exhibit = Exhibit.find(params[:id])
+  @artists = Artist.all
   erb(:edit_exhibit)
 end
 

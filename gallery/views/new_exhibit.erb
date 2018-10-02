@@ -16,10 +16,14 @@
     <option value="Performance">Performance</option>
     <option value="Text">Text</option>
     <option value="Sound">Sound</option>
-
   </select>
 
-
+<label for="artist_id">Assign Artist</label>
+<select name="artist_id">
+<% for artist in @artists %>
+  <option value="<%=artist.id%>"><%=artist.join_name %></option>
+<%end%>
+</select>
 
 
 

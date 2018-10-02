@@ -16,5 +16,14 @@
   <option value="<%=@exhibit.category%>"<%= "selected" if @exhibit.category == "Sound" %>>Sound</option>
 </select>
 
-<input type="submit" value="Update also"/>
+<label for="artist_id">Assign Artist</label>
+<select name="artist_id">
+<% for artist in @artists %>
+  <option value="<%=artist.id%>"><%=artist.join_name %></option>
+<%end%>
+</select>
+
+
+
+<input type="submit" value="Update Exhibit"/>
 </form>

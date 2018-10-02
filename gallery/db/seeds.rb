@@ -1,11 +1,11 @@
 require_relative("../models/artist")
 require_relative("../models/exhibit")
-require_relative("../models/assignment")
+# require_relative("../models/assignment")
 
 
 require('pry')
 
-Assignment.delete_all()
+# Assignment.delete_all()
 Exhibit.delete_all()
 Artist.delete_all()
 
@@ -26,13 +26,13 @@ artist3.save
 artist4.save
 artist5.save
 
-exhibit1 = Exhibit.new({"title" => "Scrofula & Pox", "exhibit_information" => "URL", "category" => "Textiles"})
-exhibit2 = Exhibit.new({"title" => "Inner Outer Otter", "exhibit_information" => "URL", "category" => "Performance"})
-exhibit3 = Exhibit.new({"title" => "CRYSTALLINE CHRYSALIS CRISIS", "exhibit_information" => "URL", "category" => "Sculpture"})
-exhibit4 = Exhibit.new({"title" => "Living Arrangement", "exhibit_information" => "URL", "category" => "Textiles"})
-exhibit5 = Exhibit.new({"title" => "non organic bias", "exhibit_information" => "URL", "category" => "Drawing"})
-exhibit6 = Exhibit.new({"title" => "house", "exhibit_information" => "URL", "category" => "Drawing"})
-exhibit7 = Exhibit.new({"title" => "Scented Jackhammer", "exhibit_information" => "URL", "category" => "Sculpture"})
+exhibit1 = Exhibit.new({"title" => "Scrofula & Pox", "exhibit_information" => "URL", "category" => "Textiles", "artist_id" => artist1.id})
+exhibit2 = Exhibit.new({"title" => "Inner Outer Otter", "exhibit_information" => "URL", "category" => "Performance",  "artist_id" => artist2.id})
+exhibit3 = Exhibit.new({"title" => "CRYSTALLINE CHRYSALIS CRISIS", "exhibit_information" => "URL", "category" => "Sculpture",  "artist_id" => artist3.id})
+exhibit4 = Exhibit.new({"title" => "Living Arrangement", "exhibit_information" => "URL", "category" => "Textiles",  "artist_id" => artist4.id})
+exhibit5 = Exhibit.new({"title" => "non organic bias", "exhibit_information" => "URL", "category" => "Drawing",  "artist_id" => artist5.id})
+exhibit6 = Exhibit.new({"title" => "house", "exhibit_information" => "URL", "category" => "Drawing",  "artist_id" => artist5.id})
+exhibit7 = Exhibit.new({"title" => "Scented Jackhammer", "exhibit_information" => "URL", "category" => "Sculpture",  "artist_id" => artist4.id})
 
 exhibit1.save
 exhibit2.save
@@ -43,24 +43,24 @@ exhibit6.save
 exhibit7.save
 
 
-assignment1 = Assignment.new({"artist_id" => artist1.id, "exhibit_id" => exhibit1.id})
-assignment2 = Assignment.new({"artist_id" => artist2.id, "exhibit_id" => exhibit2.id})
-assignment3 = Assignment.new({"artist_id" => artist3.id, "exhibit_id" => exhibit3.id})
-assignment4 = Assignment.new({"artist_id" => artist4.id, "exhibit_id" => exhibit4.id})
-assignment5 = Assignment.new({"artist_id" => artist5.id, "exhibit_id" => exhibit5.id})
-assignment6 = Assignment.new({"artist_id" => artist5.id, "exhibit_id" => exhibit6.id})
-assignment7 = Assignment.new({"artist_id" => artist4.id, "exhibit_id" => exhibit7.id})
+# assignment1 = Assignment.new({"artist_id" => artist1.id, "exhibit_id" => exhibit1.id})
+# assignment2 = Assignment.new({"artist_id" => artist2.id, "exhibit_id" => exhibit2.id})
+# assignment3 = Assignment.new({"artist_id" => artist3.id, "exhibit_id" => exhibit3.id})
+# assignment4 = Assignment.new({"artist_id" => artist4.id, "exhibit_id" => exhibit4.id})
+# assignment5 = Assignment.new({"artist_id" => artist5.id, "exhibit_id" => exhibit5.id})
+# assignment6 = Assignment.new({"artist_id" => artist5.id, "exhibit_id" => exhibit6.id})
+# assignment7 = Assignment.new({"artist_id" => artist4.id, "exhibit_id" => exhibit7.id})
 #Note - seems like an artist can't take more than one assignment??? needs work.
 
 
-
-assignment1.save
-assignment2.save
-assignment3.save
-assignment4.save
-assignment5.save
-assignment6.save
-assignment7.save
+# 
+# assignment1.save
+# assignment2.save
+# assignment3.save
+# assignment4.save
+# assignment5.save
+# assignment6.save
+# assignment7.save
 
 # artist1.delete_artist()
 # assignment1.delete_assignment()
