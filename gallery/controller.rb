@@ -30,6 +30,12 @@ get '/exhibits' do
   erb(:view_exhibits)
 end
 
+#show all exhibits at current exhibition
+get '/current_exhibition' do
+  @exhibits = Exhibit.all
+  erb(:current_exhibition)
+end
+
 #add new artist
 get '/artists/new' do
   erb(:new)
@@ -86,4 +92,11 @@ end
 get '/exhibits/:id' do
   @exhibit = Exhibit.find(params[:id])
   erb(:view_exhibit)
+end
+
+# show one exhibit at public
+
+get '/public_exhibits/:id' do
+  @exhibit = Exhibit.find(params[:id])
+  erb(:public_exhibit)
 end
