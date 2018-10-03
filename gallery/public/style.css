@@ -15,12 +15,9 @@ p {
 
 }
 
-/* nav {
-
-  font-family: arial;
-  color: orange;
-  font-size: 11pt; */
-
+a {
+  color: black:
+}
 }
 
 form {
@@ -30,12 +27,13 @@ form {
 }
 
 .container {
-
+  display: flex;
+  justify-content: center;
 }
 
 .main {
-  display: flex;
-  justify-content: center;
+
+
 
 }
 
@@ -43,7 +41,6 @@ form {
   font-family: arial;
   color: black;
   font-size: 11pt;
-  display: flex;
-  justify-content: center;
+
 
 }
