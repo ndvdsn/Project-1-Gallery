@@ -11,6 +11,7 @@ h1 {
 p {
 
   font-family: arial;
+  color: black;
 
 }
 
@@ -33,12 +34,16 @@ form {
 }
 
 .main {
+  display: flex;
+  justify-content: center;
 
 }
 
 .nav {
   font-family: arial;
-  color: orange;
+  color: black;
   font-size: 11pt;
+  display: flex;
+  justify-content: center;
 
 }

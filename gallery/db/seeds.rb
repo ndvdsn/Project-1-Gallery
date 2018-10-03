@@ -29,9 +29,9 @@ artist5.save
 exhibit1 = Exhibit.new({"title" => "Scrofula & Pox", "exhibit_information" => "URL", "category" => "Textiles", "artist_id" => artist1.id})
 exhibit2 = Exhibit.new({"title" => "Inner Outer Otter", "exhibit_information" => "URL", "category" => "Performance",  "artist_id" => artist2.id})
 exhibit3 = Exhibit.new({"title" => "CRYSTALLINE CHRYSALIS CRISIS", "exhibit_information" => "URL", "category" => "Sculpture",  "artist_id" => artist3.id})
-exhibit4 = Exhibit.new({"title" => "Living Arrangement", "exhibit_information" => "URL", "category" => "Textiles",  "artist_id" => artist4.id})
-exhibit5 = Exhibit.new({"title" => "non organic bias", "exhibit_information" => "URL", "category" => "Drawing",  "artist_id" => artist5.id})
-exhibit6 = Exhibit.new({"title" => "house", "exhibit_information" => "URL", "category" => "Drawing",  "artist_id" => artist5.id})
+exhibit4 = Exhibit.new({"title" => "Linber Crayon for Goat Numbler", "exhibit_information" => "URL", "category" => "Textiles",  "artist_id" => artist4.id})
+exhibit5 = Exhibit.new({"title" => "Non Organic Bias", "exhibit_information" => "URL", "category" => "Drawing",  "artist_id" => artist5.id})
+exhibit6 = Exhibit.new({"title" => "Icti for Icti Lipids Gong Bath", "exhibit_information" => "URL", "category" => "Drawing",  "artist_id" => artist5.id})
 exhibit7 = Exhibit.new({"title" => "Scented Jackhammer", "exhibit_information" => "URL", "category" => "Sculpture",  "artist_id" => artist4.id})
 
 exhibit1.save
@@ -53,7 +53,7 @@ exhibit7.save
 #Note - seems like an artist can't take more than one assignment??? needs work.
 
 
-# 
+#
 # assignment1.save
 # assignment2.save
 # assignment3.save

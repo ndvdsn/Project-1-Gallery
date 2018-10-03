@@ -24,24 +24,28 @@ get '/artists' do
 end
 
 
-# show all exhibits at exhibits page
+# show all exhibits at exhibits page manager view
 get '/exhibits' do
   @exhibits = Exhibit.all
   @artists = Artist.all
   erb(:view_exhibits)
 end
 
-#show all exhibits at current exhibition
+#show all exhibits at current exhibition public view
 get '/current_exhibition' do
   @exhibits = Exhibit.all
+  @artists = Artist.all
   erb(:current_exhibition)
 end
 
 #filer exhibits by artist name
-get '/current_exhibition' do
-  @artists = Artist.list_exhibits(params)
-erb(:current_exhibition)
+post '/current_exhibition/filter' do
+  artist = Artist.find(params["artist_filter"])
+  @exhibits = artist.list_exhibits
+erb(:filter_by_artist)
 end
+
+
 
 
 #add new artist
