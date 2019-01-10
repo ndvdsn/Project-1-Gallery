@@ -51,42 +51,67 @@ artist5.save
 exhibit1 = Exhibit.new({
   "title" => "Scrofula & Pox",
   "exhibit_information" => "For her specially commissioned exhibition held at the Reid Gallery at Glasgow School of Art in early 2016, Rachel Lowther drew on contemporary conflicts and research she was invited to undertake into the World War I holdings of GSA Archives. She used her research to inspire a new body of work exploring the human impulse for fighting and violence. Banners made from floral bed sheets were printed with images from war ravaged cities; a film depicted a little boy at play, acting out a brutal battle with a hoard of action figures; and clay sculptures of the human figure - measured, considered and modelled in clay over weeks - were captured on film being destroyed in minutes with a pickaxe handle. The exhibition title – Nothing compares to the first time getting shot at - was a quote from a British soldier serving in Afghanistan in 2010.",
-  "ex_image_1" => "/images/rachel_lowther_1.jpg", "ex_image_2" => "/images/rachel_lowther_2.jpg", "ex_image_3" => "/images/rachel_lowther_3.jpg", "category" => "Textiles", "artist_id" => artist1.id
+  "ex_image_1" => "/images/rachel_lowther_1.jpg",
+  "ex_image_2" => "/images/rachel_lowther_2.jpg",
+  "ex_image_3" => "/images/rachel_lowther_3.jpg",
+  "category" => "Textiles",
+  "artist_id" => artist1.id
   })
 
 exhibit2 = Exhibit.new({
   "title" => "Inner Outer Otter",
   "exhibit_information" => "An informal listening and recording space where a range of experiences and encounters can take place, the library houses artworks from invited guests, a well as other materials from various times and places that together create a bank of different forms of knowledge around listening.
-  Visitors are welcome to come by for a chat with the artists and to interact with these works at any time. The space will be activated further by a programme of events for listeners of all ages.", "category" => "Performance",
+  Visitors are welcome to come by for a chat with the artists and to interact with these works at any time. The space will be activated further by a programme of events for listeners of all ages.",
+  "ex_image_1" => "/images/anneke_kampman_1.jpg",
+  "ex_image_2" => "/images/anneke_kampman_2.jpg",
+  "ex_image_3" => "/images/anneke_kampman_3.jpg",
+  "category" => "Performance",
   "artist_id" => artist2.id
 })
 exhibit3 = Exhibit.new({
   "title" => "CRYSTALLINE CHRYSALIS CRISIS",
   "exhibit_information" => "Former Peeesseye member Fritz Welch presents an album of totally off-the-wall vocal pieces. Double-tracking and processing his voice, he starts out speaking normal words but quickly goes off the rails into elastic-faced jibber-jabber and primal gobbledygook. The fact that there’s two of him making these alien cartoon noises only increases the nuttiness of it all. I’m not an expert on dadaist sound poetry so I have no clue who to compare this to — other than weird voices I come up with when I think nobody’s around. He breaks slightly from the madness with the brief “Tamio’s Prison Song”, a listing of several prisons described as “a poetic response to a song often performed by Tamio Shiraishi”. The second side is my favorite of the two, because his voice is aided by electronics, so he’s grunting and shouting into the void, and then his voice comes back to haunt him. Definitely recommended for fans of the vocal stylings of Dylan Nyoukis and Aaron Dilloway. Listen and buy from Bandcamp, if you dare.",
+  "ex_image_1" => "/images/fritz_welch_1.jpg",
+  "ex_image_2" => "/images/fritz_welch_2.jpg",
+  "ex_image_3" => "/images/fritz_welch_3.jpg",
+
   "category" => "Sculpture",
   "artist_id" => artist3.id})
 
 exhibit4 = Exhibit.new({
-  "title" => "Linber Crayon for Goat Numbler",
+  "title" => "Limber Crayon for Goat Numbler",
   "exhibit_information" => "Working across performance, installation and writing, Loft Schulz employs both manual and digital crafts such as tie dye, HTML coding and paper making in which the labour of the work is evident. These objects are often slight and require care, putting the viewer into a precarious relationship with their disintegration, damage, and destruction. These deal with the body’s gendered relationship to architecture and space, interacting with the specific theatricality of the different architectural spaces where they take place, such as the theatre, the museum, or the white cube. Channeling historical figures such as Joan of Arc and troubadora Beatrice de Dia, the performances exist in the slippage between the apparent authenticity of the embodied speaking subject and the experience of living in a body always already compromised, mediated, and observed by power.",
+  "ex_image_1" => "/images/beatrice_loft_schultz_1.jpg",
+  "ex_image_2" => "/images/beatrice_loft_schultz_2.jpg",
+  "ex_image_3" => "/images/beatrice_loft_schultz_3.jpg",
   "category" => "Textiles",
   "artist_id" => artist4.id})
 
 exhibit5 = Exhibit.new({
   "title" => "Non Organic Bias",
   "exhibit_information" => "Jean-Luc Guionnet is a Parisian artist whose practice encompasses composition, improvisation, filmmaking, and philosophy. He has toured extensively as a solo saxophonist, and has spent the past 15 years performing on on historic church organs around the world. For him, music is one of many methods by which to test reality. Having studied musique concrète under Iannis Xenakis, his acousmatic sensitivities reveal themselves through the reverence that guides these interrogations. Approaching his instruments as imperfect vehicles of artificial intelligence, his attentive engagement applies speculative pressure to the expressive limits of their material properties. In his hands, design flaws and repressed qualities transform into catalysts for novel sonic emanations, and the simplest of processes are mobilized to extract infinitesimal acoustic detail. Although a formidable solo performer, Guionnet is no stranger to collaboration. In addition to his ongoing relationship to the seminal French improvisation group Hubbub, he has worked extensively with artists such as Taku Unami, Eric La Casa, Toshimaru Nakamura, Will Guthrie, and Mattin.",
+  "ex_image_1" => "/images/jean_luc_guionnet_1.jpg",
+  "ex_image_2" => "/images/jean_luc_guionnet_2.jpg",
+  "ex_image_3" => "/images/jean_luc_guionnet_3.jpg",
   "category" => "Drawing",
   "artist_id" => artist5.id})
 
 exhibit6 = Exhibit.new({
   "title" => "Icti for Icti Lipids Gong Bath",
   "exhibit_information" => "Jean-Luc Guionnet is a Parisian artist whose practice encompasses composition, improvisation, filmmaking, and philosophy. He has toured extensively as a solo saxophonist, and has spent the past 15 years performing on on historic church organs around the world. For him, music is one of many methods by which to test reality. Having studied musique concrète under Iannis Xenakis, his acousmatic sensitivities reveal themselves through the reverence that guides these interrogations. Approaching his instruments as imperfect vehicles of artificial intelligence, his attentive engagement applies speculative pressure to the expressive limits of their material properties. In his hands, design flaws and repressed qualities transform into catalysts for novel sonic emanations, and the simplest of processes are mobilized to extract infinitesimal acoustic detail. Although a formidable solo performer, Guionnet is no stranger to collaboration. In addition to his ongoing relationship to the seminal French improvisation group Hubbub, he has worked extensively with artists such as Taku Unami, Eric La Casa, Toshimaru Nakamura, Will Guthrie, and Mattin.",
+  "ex_image_1" => "/images/jean_luc_guionnet_1.jpg",
+  "ex_image_2" => "/images/jean_luc_guionnet_2.jpg",
+  "ex_image_3" => "/images/jean_luc_guionnet_3.jpg",
   "category" => "Drawing",
-  "artist_id" => artist5.id})
+  "artist_id" => artist5.id
+  })
 
 exhibit7 = Exhibit.new({
   "title" => "Scented Jackhammer",
   "exhibit_information" => "Working across performance, installation and writing, Loft Schulz employs both manual and digital crafts such as tie dye, HTML coding and paper making in which the labour of the work is evident. These objects are often slight and require care, putting the viewer into a precarious relationship with their disintegration, damage, and destruction. These deal with the body’s gendered relationship to architecture and space, interacting with the specific theatricality of the different architectural spaces where they take place, such as the theatre, the museum, or the white cube. Channeling historical figures such as Joan of Arc and troubadora Beatrice de Dia, the performances exist in the slippage between the apparent authenticity of the embodied speaking subject and the experience of living in a body always already compromised, mediated, and observed by power.",
+  "ex_image_1" => "/images/beatrice_loft_schultz_1.jpg",
+  "ex_image_2" => "/images/beatrice_loft_schultz_2.jpg",
+  "ex_image_3" => "/images/beatrice_loft_schultz_3.jpg",
   "category" => "Sculpture",
   "artist_id" => artist4.id
   })
