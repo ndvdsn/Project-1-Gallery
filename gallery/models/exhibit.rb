@@ -2,7 +2,7 @@ require_relative("../db/sql_runner")
 
 class Exhibit
 
-  attr_accessor :title, :exhibit_information, :category, :artist_id
+  attr_accessor :title, :exhibit_information, :category, :ex_image_1, :ex_image_2, :ex_image_3, :artist_id
   attr_reader :id
 
   def initialize(options)
@@ -10,12 +10,15 @@ class Exhibit
     @title = options["title"]
     @exhibit_information = options["exhibit_information"]
     @category = options["category"]
+    @ex_image_1 = options["ex_image_1"]
+    @ex_image_2 = options["ex_image_2"]
+    @ex_image_3 = options["ex_image_3"]
     @artist_id = options["artist_id"].to_i
   end
 
   def save()
-    sql = "INSERT INTO exhibits (title, exhibit_information, category, artist_id) VALUES ($1, $2, $3, $4) RETURNING id"
-    values = [@title, @exhibit_information, @category, @artist_id]
+    sql = "INSERT INTO exhibits (title, exhibit_information, category, ex_image_1, ex_image_2, ex_image_3, artist_id) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
+    values = [@title, @exhibit_information, @category, @ex_image_1, @ex_image_2, @ex_image_3, @artist_id]
     result = SqlRunner.run(sql, values)
     id = result.first["id"]
     @id = id.to_i
@@ -34,8 +37,8 @@ class Exhibit
   end
 
   def update_exhibit
-    sql = "UPDATE exhibits SET ( title, exhibit_information, category, artist_id) = ($1, $2, $3, $4) WHERE id = $5"
-    values = [@title, @exhibit_information, @category, @artist_id, @id]
+    sql = "UPDATE exhibits SET ( title, exhibit_information, ex_image_1, ex_image_2, ex_image_3, category, artist_id) = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
+    values = [@title, @exhibit_information, @category,  @ex_image_1, @ex_image_2, @ex_image_3, @artist_id, @id]
     SqlRunner.run(sql, values)
   end
 

@@ -1,11 +1,12 @@
 
-<h1> Exhibits</h1>
+<h1>Exhibits</h1>
 
 <% @exhibits.each do |exhibit| %>
 <div class="exhibit">
 <p><%= exhibit.title() %></p>
 <p><%= exhibit.exhibit_information() %></p>
 <p><%= exhibit.category() %></p>
+<img class = “image-container-1” src=“<%= @exhibit.ex_image_1%>” alt=“<%=@exhibit.title%>”>
 <p><a href="/exhibits/<%= exhibit.id %>">View Exhibit</a></p>
 <br>
 <br>

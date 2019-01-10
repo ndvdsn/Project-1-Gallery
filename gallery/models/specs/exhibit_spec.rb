@@ -5,7 +5,7 @@ require_relative("../exhibit")
 class TestExhibit <Minitest::Test
 
   def setup
-    options = {"id" => 1, "title" => "Scrofula & Pox", "exhibit_information" => "TEXT"}
+    options = {"id" => 1, "title" => "Scrofula & Pox", "ex_image_1" => "/images/rachel_lowther_1.jpg", "ex_image_2" => "/images/rachel_lowther_2.jpg", "ex_image_3" => "/images/rachel_lowther_3.jpg", "exhibit_information" => "TEXT"}
     @exhibit = Exhibit.new(options)
   end
 
@@ -21,7 +21,7 @@ class TestExhibit <Minitest::Test
   end
 
 
-  
+
 
 #########################
 
